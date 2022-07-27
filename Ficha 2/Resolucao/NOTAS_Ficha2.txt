@@ -1,0 +1,38 @@
+*** FICHA 2 ***
+
+Raspberry Pi 2 Model B:
+	Raspberry Pi: 	srsa03 
+	Name: 		raspberrypi03 
+	DNS name: 		srsa-pi-3 
+	Address: 		10.6.1.4
+	Password:		srsa
+
+
+Conexão:
+	ssh srsa@10.6.1.4
+	Password: srsa
+	
+	Sair:
+		exit
+
+
+My Directory:
+	cd /user/dftf/
+
+
+Python virtual environment:
+	Criar:
+		python -m venv dftfvenv
+
+	To use, activate:
+		source dftfvenv/bin/activate
+
+	deactivate
+
+	Outros:
+		pip install --upgrade pip
+		python -m pip install --upgrade pip
+		pip install gpiozero pigpio
+		pip freeze > requirements.txt
+		cat requirements.txt
+

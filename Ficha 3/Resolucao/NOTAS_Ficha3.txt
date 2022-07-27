@@ -1,0 +1,76 @@
+*** FICHA 3 ***
+
+Sending files to the Raspberry Pi using SCP:
+
+	From a Windows PC (WinSCP):
+		File Protocol: SCP
+		Host name: 10.6.1.4
+		Port number: 22
+		User name: srsa
+		Password: srsa
+
+	From a Linux-based PC:
+		scp <file.py> srsa@10.6.1.4:/user/dftf/
+
+
+
+Conexão:
+	ssh srsa@10.6.1.4
+	Password: srsa
+	
+	Sair:
+		exit
+
+My Directory:
+	cd /user/dftf/
+
+Python virtual environment:
+	To use, activate:
+		source dftfvenv/bin/activate
+
+
+
+Exercicio 2:
+
+	sudo killall pigpiod
+	
+	start the PiGPIO daemon:
+		sudo pigpiod
+
+	modify the code according to your circuit (in this assignment GPIO_PIN = 17 was used);
+
+	Transfer the led_pigpio.py file;
+
+	execute:
+		python led_pigpio.py
+
+
+
+Exercicio 3:
+
+	modify the code according to your circuit (server_udp_BLINK.py): BLINK + GPIO_PIN = 17;
+
+	On the Raspberry Pi:
+		python server_udp_LED.py 10.6.1.4 4321
+	
+	On your PC:
+		python3 client_udp.py 10.6.1.4 4321 BLINK
+	
+	
+
+Exercicio 4:
+	
+	Modify the code from the previous exercise, such that the server can receive three commands:
+	1. ON: turns ON the LED;
+	2. OFF: turns OFF the LED;
+	3. BLINK:n:i: makes the LED BLINK ‘n’ times, turning it ON/OFF for ‘i’ seconds
+	
+	On the Raspberry Pi:
+		python server_udp.py 10.6.1.4 4321
+
+	On your PC:
+		python3 client_udp.py 10.6.1.4 4321 ON
+		python3 client_udp.py 10.6.1.4 4321 OFF
+		python3 client_udp.py 10.6.1.4 4321 BLINK:n:i
+
+	

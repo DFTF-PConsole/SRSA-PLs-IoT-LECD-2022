@@ -1,0 +1,8 @@
+cd OneDrive/Documentos/GitHub/SRSA-Fichas-2022/Ficha\ 1/Resolucao/
+
+
+python3 server_tcp.py 127.0.0.1 10000
+python3 client_tcp.py 127.0.0.1 10000
+
+python3 server_udp.py 127.0.0.1 10000
+python3 client_udp.py 127.0.0.1 10000 omg

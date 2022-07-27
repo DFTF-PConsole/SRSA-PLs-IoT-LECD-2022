@@ -1,0 +1,76 @@
+*** FICHA 4 ***
+
+Sending files to the Raspberry Pi using SCP:
+
+	From a Windows PC (WinSCP):
+		File Protocol: SCP
+		Host name: 10.6.1.4
+		Port number: 22
+		User name: srsa
+		Password: srsa
+
+	From a Linux-based PC:
+		scp <file.py> srsa@10.6.1.4:/user/dftf/
+
+
+
+Conexão:
+	ssh srsa@10.6.1.4
+	Password: srsa
+	
+	Sair:
+		exit
+
+My Directory:
+	cd user/dftf/
+
+Python virtual environment:
+	To use, activate:
+		source dftfvenv/bin/activate
+
+
+
+
+...
+
+
+
+Exercicio 1:
+	
+	sudo killall pigpiod
+	
+	sudo pigpiod
+
+	python led_gpiozero.py
+
+
+
+
+
+Exercicio 2:
+
+	sudo killall pigpiod
+	
+	sudo pigpiod
+
+	python button_pigpio.py
+
+	python button_gpiozero.py
+
+
+
+Exercicio 3:
+
+	python dweet_led.py
+
+
+
+	
+Exercicio 4:
+	
+	python dweet_button.py
+
+
+
+
+	
